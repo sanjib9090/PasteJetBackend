@@ -1,7 +1,6 @@
 {
-  "name": "code-execution-backend",
+  "name": "code-api-render",
   "version": "1.0.0",
-  "description": "Backend for code execution proxy",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"

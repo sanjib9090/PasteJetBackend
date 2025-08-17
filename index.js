@@ -24,10 +24,8 @@ app.post('/execute', async (req, res) => {
   }
 });
 
-// Only needed when running locally; Vercel ignores this line.
-if (require.main === module) {
-  const PORT = process.env.PORT || 3000;
-  app.listen(PORT, () => console.log(`Server listening on ${PORT}`));
-}
+// Listen on the port provided by Render (or 3000 locally)
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server listening on ${PORT}`));
 
-module.exports = app;               // Required for Vercel’s serverless build
+module.exports = app; // Optional, but good for modularity
